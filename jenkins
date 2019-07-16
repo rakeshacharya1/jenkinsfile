@@ -4,18 +4,14 @@ pipeline {
         stages {
             stage('build') {
                 steps {
-                    echo 'building...'
+                    sh 'echo "My first oioeline"'
+                    sh '''
+                        echo "by the way, i can do more stuff"
+                        ls -lah
+                    '''    
+                       
                 }
         }
-            stage('test') {
-                steps {
-                    echo 'testing'
-                }
-            }
-            stage('deploy') {
-                steps {
-                    echo'deploying..'
-                }
-                }
-            }
+            
+     }
 }
